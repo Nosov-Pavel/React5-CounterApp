@@ -1,32 +1,42 @@
-import React, {useState} from 'react'
-import ListItem from "./listItem";
+import React from "react";
+import Menu from "./Menu";
+import Menu2 from "./Menu2";
+import Menu3 from "./Menu3";
+import Menu4 from "./Menu4";
 
-function App() {
+const menu = [
+    { title: 'Home', link: '/'},
+    { title: 'Products', link: '/products'},
+    { title: 'Contacts', link: '/contacts'},
+  ];
 
-     const [list, setList] = useState([1, 2, 3, 4]);
-     const counterPlus = (index) => {
-         console.log('index', index)
-        const newArr = list.map((el, i) =>{
-            if (index === i) {
-                return el + 1
-            }
+const menu2 = [
+    {title2: 'Address', link: '/address' },
+    {title2: 'City', link: '/city' },
+    {title2: 'Country', link: '/country' },
+];
 
-            return el
-        })
-         console.log('newArr', newArr)
+const person = [
+    {title3: 'Name', link: '/'},
+    {title3: 'Midle Name', link: '/midleName'},
+    {title3: 'Firs Name', link: '/firstName'},
+];
 
-         setList(newArr)
+const status = [
+    {title4: 'Correct', link: '/'},
+    {title4: 'Un Correct', link: '/uncorrect'},
+    {title4: 'Defolt', link: '/defolt'},
+];
 
-    }
 
-    return (
+export default function App(){
+    return(
         <div>
-            {list.map( (el, index) => {
-               return <ListItem counterPlus={counterPlus} index={index} el={el} key={Math.random()}/>
-            })}
-
+            <h1>Hello WebS</h1>
+            <Menu menu={menu}/>
+            <Menu2 menu2={menu2}/>
+            <Menu3 person={person}/>
+            <Menu4 status={status}/>
         </div>
     );
 }
-
-export default App;
