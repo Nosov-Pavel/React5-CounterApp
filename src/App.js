@@ -13,7 +13,9 @@ return (
     <div className='App'>
         TODO
         {list1.map(el=> <li>{el.user}**{el.gender}**{el.active.toString()}
-        </li>)}
+        <button>Move to other List</button>
+        </li>)
+        }
 
     </div>
 );
