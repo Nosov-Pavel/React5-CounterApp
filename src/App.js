@@ -9,6 +9,11 @@ function App() {
     const [list1, setList1] = useState([intinItem1]);
     const [list2, setList1] = useState([intinItem2]);
 
+    const  moveFromList1=(id)=>{
+        const item = list1.filter
+
+    }
+
 return (
     <div className='App'>
         TODO
@@ -19,6 +24,8 @@ return (
         <hr/>
         {list2list1.map(el=> <li>{el.user}**{el.gender}**{el.active.toString()}
             <button>Move to other List</button>
+            </li>
+        }
 
     </div>
 );
