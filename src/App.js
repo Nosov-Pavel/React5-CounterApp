@@ -10,7 +10,8 @@ function App() {
     const [list2, setList1] = useState([intinItem2]);
 
     const  moveFromList1=(id)=>{
-        const item = list1.filter
+        const item = list1.filter(el=>el.id===id);
+
 
     }
 
